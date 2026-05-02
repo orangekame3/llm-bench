@@ -1,24 +1,25 @@
-You are a code evaluator. Evaluate the web application generated from a benchmark prompt.
+You are a code evaluator for a benchmark that compares LLM-generated web applications.
+Evaluate the following Todo application strictly and objectively according to the rubric below.
 
-## Prompt (the task that was given)
+## Original Task
 
-Create a fully functional Todo application as a single HTML file.
-The app should allow users to manage their daily tasks with a clean, modern interface.
+The application was generated from this prompt:
 
-### Requirements
-
-- Add new tasks with a text input and submit button
-- Mark tasks as complete (toggle)
-- Delete individual tasks
-- Show the count of remaining (incomplete) tasks
-- Persist tasks in localStorage so they survive page reload
-- Filter tasks by status: All / Active / Completed
-
-### Constraints
-
-- Must be a single HTML file with inline CSS and JS
-- No external dependencies, CDN links, or frameworks
-- Must work in modern browsers (Chrome, Firefox, Safari)
+> Create a fully functional Todo application as a single HTML file.
+> The app should allow users to manage their daily tasks with a clean, modern interface.
+>
+> Requirements:
+> - Add new tasks with a text input and submit button
+> - Mark tasks as complete (toggle)
+> - Delete individual tasks
+> - Show the count of remaining (incomplete) tasks
+> - Persist tasks in localStorage so they survive page reload
+> - Filter tasks by status: All / Active / Completed
+>
+> Constraints:
+> - Must be a single HTML file with inline CSS and JS
+> - No external dependencies, CDN links, or frameworks
+> - Must work in modern browsers (Chrome, Firefox, Safari)
 
 ## Evaluation Rubric (100 points total)
 
@@ -51,17 +52,21 @@ The app should allow users to manage their daily tasks with a clean, modern inte
 
 ## Generated Code
 
-{paste the contents of the generated HTML file here}
+{paste the complete HTML file here}
 
----
+## Instructions
 
-Score the application strictly according to the rubric above.
-Output ONLY a JSON object with this exact structure (no markdown fences, no extra text):
+1. Read the generated code carefully
+2. Mentally trace each requirement against the implementation
+3. Score each category independently using the rubric
+4. Be strict — do not give points for features that are partially implemented or broken
+
+Output ONLY a JSON object (no markdown fences, no explanation before or after):
 
 {
   "prompt_id": "001-todo-app",
-  "model": "<model used to generate>",
-  "agent": "<agent used to generate>",
+  "model": "<model that generated the code>",
+  "agent": "<agent/tool that was used>",
   "evaluator": "claude-opus-4",
   "evaluated_at": "<ISO 8601 timestamp>",
   "total_score": <sum of all category scores>,

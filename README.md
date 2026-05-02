@@ -41,37 +41,20 @@ llm-bench/
 
 ## Workflow
 
-### 1. Create a prompt
+### 1. Generate
 
-Copy templates and fill in:
-
-```bash
-cp templates/prompt-template.md prompts/002-my-app/prompt.md
-cp templates/eval-template.md prompts/002-my-app/eval.md
-```
-
-### 2. Generate an app
-
-Use each model x agent combination to generate the app from the prompt. Save the result:
+Paste `prompts/{id}/prompt.md` into any LLM chat (Claude, ChatGPT, Gemini, Cursor, etc.). Save the output to:
 
 ```
-results/001-todo-app/claude-opus-4_claude-code/
-├── meta.json   # fill from templates/meta-template.json
-└── app/        # generated files go here
+results/{prompt_id}/{model}_{agent}/app/index.html
 ```
 
-### 3. Evaluate
+### 2. Evaluate
 
-Use Claude Opus (fixed evaluator) to score the generated app. Each prompt has a ready-to-use evaluation prompt:
-
-```bash
-cat prompts/001-todo-app/eval-prompt.md
-```
-
-Paste the generated code into the `{paste ...}` section and send to the evaluator. Save the output JSON to:
+Paste `prompts/{id}/eval-prompt.md` into Claude Opus, replacing the `{paste ...}` placeholder with the generated code. Save the output JSON to:
 
 ```
-evaluations/001-todo-app/claude-opus-4_claude-code.json
+evaluations/{prompt_id}/{model}_{agent}.json
 ```
 
 ### 4. View results

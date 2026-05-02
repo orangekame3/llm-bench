@@ -1,8 +1,4 @@
-# Todo App
-
-## Task
-
-Create a fully functional Todo application as a single HTML file.
+You are a frontend developer. Create a fully functional Todo application as a single HTML file.
 The app should allow users to manage their daily tasks with a clean, modern interface.
 
 ## Requirements
@@ -19,3 +15,8 @@ The app should allow users to manage their daily tasks with a clean, modern inte
 - Must be a single HTML file with inline CSS and JS
 - No external dependencies, CDN links, or frameworks
 - Must work in modern browsers (Chrome, Firefox, Safari)
+
+## Output
+
+Output the complete HTML file. Do not omit any part of the code.
+Do not include any explanation, commentary, or markdown fences — output only the raw HTML.
