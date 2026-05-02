@@ -62,7 +62,13 @@ results/001-todo-app/claude-opus-4_claude-code/
 
 ### 3. Evaluate
 
-Feed the eval rubric (`eval.md`) and generated code to the evaluator agent (Claude Opus). Save the output JSON to:
+Use Claude Opus (fixed evaluator) to score the generated app. Each prompt has a ready-to-use evaluation prompt:
+
+```bash
+cat prompts/001-todo-app/eval-prompt.md
+```
+
+Paste the generated code into the `{paste ...}` section and send to the evaluator. Save the output JSON to:
 
 ```
 evaluations/001-todo-app/claude-opus-4_claude-code.json
