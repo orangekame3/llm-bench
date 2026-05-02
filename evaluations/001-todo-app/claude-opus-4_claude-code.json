@@ -1,0 +1,31 @@
+{
+  "prompt_id": "001-todo-app",
+  "model": "claude-opus-4",
+  "agent": "claude-code",
+  "evaluator": "claude-opus-4",
+  "evaluated_at": "2026-05-03T12:00:00Z",
+  "total_score": 79,
+  "categories": {
+    "functionality": {
+      "score": 30,
+      "max": 30,
+      "comment": "All six requirements fully implemented: text input with Add button, checkbox toggle for completion, individual delete via × button, remaining task count displayed, localStorage persistence with save/load, and three-state filter (All/Active/Completed)."
+    },
+    "code_quality": {
+      "score": 20,
+      "max": 25,
+      "comment": "Clean IIFE structure with well-named functions (save, render, addTask). CSS/HTML/JS properly separated within the single file. Input is trimmed and empty strings rejected, but no error handling for localStorage failures (quota exceeded, corrupted JSON parse). No console errors expected. Deducted for minimal validation and slightly verbose but otherwise readable code."
+    },
+    "ui_ux": {
+      "score": 20,
+      "max": 25,
+      "comment": "Clean modern aesthetic with purple accent (#6c63ff), system font stack, rounded corners, and subtle box shadows. Good hover states on buttons, focus ring on input, and transition animations. Responsive via max-width container with padding. Contextual empty state messages are a nice touch. Loses points for lack of any animation on task add/remove and no visual feedback confirming actions."
+    },
+    "creativity": {
+      "score": 9,
+      "max": 20,
+      "comment": "Minor extras include Enter key submission, autocomplete='off', word-break for long text, auto-focus return after adding, and contextual empty state messages. However, no standout features like animations, drag-and-drop reordering, dark mode, bulk actions, edit-in-place, due dates, or categories. The design is competent but conventional with no distinctive creative choices."
+    }
+  },
+  "summary": "A solid, fully functional Todo app that meets all six requirements without bugs. The code is clean and well-organized, and the UI is modern with good interactive states. However, it lacks error handling for edge cases and offers no creative extras beyond the baseline requirements, resulting in a competent but unremarkable implementation."
+}
